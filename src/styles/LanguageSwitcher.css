@@ -1,0 +1,32 @@
+/* src/styles/LanguageSwitcher.css */
+
+.language-switcher {
+  display: flex; /* Para alinear el contenido en una fila */
+  align-items: center; /* Centrar verticalmente */
+  background-color: #fffafb; /* Color de fondo azul */
+  color: #2b2c28; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 3em; /* Bordes redondeados */
+  padding: 10px 15px; /* Relleno interno */
+  font-size: 1.3em; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.language-switcher:hover {
+  background-color: black; /* Color más oscuro al pasar el cursor */
+  color: #df2935;
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+
+
+}
+
+.language-switcher:focus {
+  outline: none; /* Sin contorno al hacer clic */
+}
+
+.flag-icon {
+  width: 20px; /* Ancho de la bandera */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 10px; /* Espacio entre la bandera y el texto */
+}

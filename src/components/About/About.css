@@ -1,0 +1,48 @@
+/* About.css */
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* O la altura que prefieras */
+  overflow: hidden;
+}
+
+.about-background {
+  background-image: url("../../assets/pic_about.jpg"); /*Asegúrate de que la ruta sea correcta */
+  background-attachment: fixed; /* Efecto parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Asegúrate de que esté detrás del contenido */
+}
+
+.about-content {
+  position: relative;
+  z-index: 2; /* El contenido debe estar por encima de la imagen de fondo */
+  color: white; /* Ajusta el color según sea necesario */
+  padding: 20px; /* Espaciado del contenido */
+  text-align: center; /* Centra el texto */
+}
+
+.center-text {
+  text-align: center; /* Justifica el texto */
+}
+
+p {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: -1px 0 black,
+    /* Sombra a la izquierda (más grande) */ 1px 0 black,
+    /* Sombra a la derecha (más grande) */ 0 -2px black,
+    /* Sombra arriba (más grande) */ 0 1px black; /* Sombra abajo (más grande) */
+  padding: 10px; /* Espacio alrededor del texto */
+  border-radius: 40px; /* Bordes redondeados opcionales */
+  display: inline-block; /* Ajusta el fondo al tamaño del texto */
+}
+
+

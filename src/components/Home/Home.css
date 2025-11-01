@@ -1,0 +1,48 @@
+/* src/components/Home.css */
+
+
+#home .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100vh; /* Cambié height por min-height */
+  z-index: 0;
+  object-fit: cover;
+  border: none;
+  overflow: hidden;
+}
+
+#home .overlay-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 44, 40, 0.3);
+  z-index: 10; /* El gradiente estará sobre el video pero detrás del texto */
+}
+
+.home-section .content {
+  margin: 0; /* Elimina márgenes */
+  z-index: 20; /* Asegúrate de que esté por encima del overlay */
+}
+
+.content h2 {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,277 @@
+/* products.css */
+
+.products-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* O la altura que prefieras */
+  overflow: hidden;
+}
+
+.products-background {
+  background-image: url("../../assets/technology_brain.jpg"); /*Asegúrate de que la ruta sea correcta */
+  background-attachment: fixed; /* Efecto parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Asegúrate de que esté detrás del contenido */
+  width: 100%;
+  height: 100vh;
+}
+
+.products-content {
+  position: absolute;
+  left: 0; /* Asegura que el contenido esté alineado a la izquierda */
+  right: 0; /* Asegura que el contenido esté alineado a la derecha, si es necesario */
+  z-index: 2; /* El contenido debe estar por encima de la imagen de fondo */
+  color: white; /* Ajusta el color según sea necesario */
+  text-align: center; /* Centra el texto */
+}
+
+.products-content h1 {
+  color: white;
+  background: #00000090;
+  border-radius: 10rem;
+  font-size: clamp(1.1rem, 2.5vw, 4rem);
+  transform: translateY(6rem);
+}
+
+.center-text {
+  background: #00000090;
+  font-size: clamp(1.1rem, 1.5vw, 2rem);
+  transform: translateY(7rem);
+}
+
+p {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -2px black, 0 1px black;
+  padding: 10px; /* Espacio alrededor del texto */
+  border-radius: 40px; /* Bordes redondeados opcionales */
+  display: inline-block; /* Ajusta el fondo al tamaño del texto */
+}
+
+/* Carousel Styles */
+.carousel-container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 100vh;
+  max-width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-bottom: 0;
+
+  padding-top: 45vh;  /*Ajusta el espaciado según lo que necesites */
+  /*transform: translateY(65%); Mueve el contenedor hacia abajo */
+  overflow: hidden;
+}
+
+.slide img {
+  max-width: 100px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.slide img:hover {
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  border-radius: 15%;
+}
+
+/* Estilo para el contenedor de la imagen */
+.slide {
+  height: 100px;
+  width: 250px;
+  position: relative; /* Esto es necesario para posicionar el texto dentro del contenedor */
+}
+
+.texto {
+  position: absolute;
+  top: 0; /* Alineamos el texto en la parte superior de la imagen */
+  left: 0;
+  width: 100%; /* Hace que el fondo ocupe todo el ancho de la imagen */
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  display: none; /* El texto está oculto por defecto */
+}
+
+/* Mostrar el texto al pasar el ratón */
+.slide:hover .texto {
+  display: block;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.products-content {
+  height: 100%;
+  width: 100%;
+}
+
+/* products.css */
+
+.products-container {
+  display: grid; /* Usamos Grid para distribuir los elementos */
+  grid-template-rows: 1fr auto; /* Primero todo el contenido, luego el carousel al final */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* Ocupa todo el ancho */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+.products-background {
+  background-image: url("../../assets/technology_brain.jpg"); /* Asegúrate de que la ruta sea correcta */
+  background-attachment: fixed; /* Efecto parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Asegúrate de que esté detrás del contenido */
+  width: 100%;
+  height: 100vh;
+}
+
+.products-content {
+  position: relative;
+  z-index: 2; /* El contenido debe estar por encima de la imagen de fondo */
+  text-align: center; /* Centra el texto */
+  padding: 2rem;
+  width: 100%;
+}
+
+.products-content h1 {
+  margin: auto;
+  max-width: fit-content;
+  border-radius: 10rem;
+  font-size: clamp(1.1rem, 2.5vw, 4rem);
+}
+
+.center-text {
+  text-align: center; /* Justifica el texto */
+}
+
+/* Carousel Styles */
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 45));
+  }
+}
+
+.texto {
+  position: absolute;
+  top: 0px; /* Posiciona la burbuja encima de la imagen */
+  left: 50%; /* Centra la burbuja horizontalmente */
+  transform: translateX(
+    -50%
+  ); /* Ajusta la burbuja para que esté completamente centrada */
+  border-radius: 20px; /* Bordes redondeados para simular la burbuja */
+
+  opacity: 0; /* La burbuja está oculta por defecto */
+  visibility: hidden; /* Asegura que no se muestre inicialmente */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Efecto de transición suave */
+}
+
+/* Mostrar el texto al pasar el ratón sobre la imagen */
+.slide:hover .texto {
+  opacity: 1; /* Hace visible la burbuja */
+  visibility: visible; /* Asegura que la burbuja sea visible */
+  top: -8rem; /* Desplaza la burbuja un poco más hacia arriba cuando se hace hover */
+  background-color: rgb(0, 0, 0);
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 180s linear infinite; /* 120 segundos para recorrer todas las imágenes */
+  will-change: transform;
+}
+
+/*
+.texto {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  justify-content: center;
+  
+}
+  */
+
+.slider {
+  background: rgba(100, 100, 100, 0.9);
+  height: 7rem;
+  position: relative;
+  border-radius: 5%;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 1rem;
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,107 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em;
+  background-color: rgba(255, 255, 255, 0); /* Fondo transparente por defecto */
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  transition: background-color 0.8s ease; /* Transición suave para el cambio de fondo */
+}
+
+/* Clase que se añadirá al hacer scroll */
+.navbar.scrolled {
+  background-color: rgba(50, 50, 50, 1);
+}
+
+/* Estilos del menú */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 2rem;
+}
+
+.nav-links li a {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #fffafb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: red;
+}
+
+.logo-container img {
+  width: auto;
+  transition: ALL 0.3s;
+}
+
+.logo-container img:hover {
+  transform: scale(1.2);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links.show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}

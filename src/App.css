@@ -1,0 +1,259 @@
+/* Normalización */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Base */
+html {
+  font-size: 100%; /* Base para los tamaños de fuente */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+
+}
+
+.App {
+  margin: 0; /* Asegúrate de que el contenedor principal no tenga márgenes */
+  padding: 0; /* Asegúrate de que el contenedor principal no tenga padding */
+  }
+
+body {
+  font-family: Inter, sans-serif; /* Fuente base */
+  line-height: 1.6; /* Mejora la legibilidad */
+  background-color: #fff; /* Color de fondo de la página */
+  color: #000000; /* Color de texto */
+  
+}
+
+
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  margin: 0 5rem; /* Espacio a ambos lados del logo */
+}
+
+/* Estilos para la imagen del logo */
+.logo {
+  height: 3.5rem; /* Ajusta la altura según tus necesidades */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Contenedor del LanguageSwitcher */
+.language-switcher-container {
+  display: flex; /* Mantener el botón en línea */
+  align-items: center; /* Centrar verticalmente el contenido del contenedor */
+}
+
+/* Estilo para el LanguageSwitcher */
+.language-switcher {
+   margin-left: 20px; /* Espacio entre el botón y el logo */
+}
+
+/* Estilos de Secciones */
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  transition: background-color 0.3s;
+}
+
+#home {
+  background-color: #ffffff;
+}
+
+#about {
+  background-color: #ffffff;
+}
+
+#services {
+  background-color: #ffffff;
+}
+
+#products {
+  background-color: #ffffff;
+}
+
+#contact {
+  background-color: #ffffff;
+}
+
+/* Estilos de Títulos y Párrafos */
+h1 {
+  font-size: 2.5rem;
+  color: #FFFAFB;
+  margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+  text-shadow: 
+  -2px 0 black,   /* Sombra a la izquierda (más grande) */
+  2px 0 black,    /* Sombra a la derecha (más grande) */
+  0 -2px black,   /* Sombra arriba (más grande) */
+  0 2px black;    /* Sombra abajo (más grande) */
+  font-size: clamp(1.1rem, 2.5vw, 4rem); /* Tamaño mínimo 2rem, máximo 3rem */
+}
+
+h2 {
+  /*font-size: 3em;*/
+  color: #FFFAFB;
+  font-size: 1.8rem;
+  margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+  text-shadow: 
+    -2px 0 black,   /* Sombra a la izquierda (más grande) */
+    2px 0 black,    /* Sombra a la derecha (más grande) */
+    0 -2px black,   /* Sombra arriba (más grande) */
+    0 2px black;    /* Sombra abajo (más grande) */
+    font-size: clamp(0.8rem, 1.6vw, 4rem); /* Tamaño mínimo 1.5rem, máximo 2.5rem */
+}
+
+h3 {
+  /*font-size: 3em;*/
+  color: #DF2935;
+  margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Sombra para simular el borde */
+}
+
+p {
+  font-size: 1.2em;
+  color: #000000;
+  margin-bottom: 10px; /* Espacio inferior para separar de otros párrafos */
+}
+
+/* Estilos de Botones */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #eb0c0c;
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column; /* Colocar los enlaces en columna en pantallas pequeñas */
+    align-items: center; /* Centrar los enlaces */
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Espacio vertical */
+  }
+}
+
+/* Estilos adicionales */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos en los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 10px 20px; /* Espaciado dentro de la barra */
+  background-color: #df2935ff; /* Fondo de la barra de navegación */
+}
+
+.logo img {
+  height: 50px; /* Ajusta el tamaño del logo */
+}
+
+.nav-items {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos del nav-items */
+}
+
+.nav-items ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding de la lista */
+  margin: 0 20px; /* Espaciado entre la lista y el botón */
+}
+
+.nav-items li {
+  display: inline; /* Los elementos de la lista se alinean en línea */
+}
+
+.nav-items a {
+  color: white; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado */
+  padding: 10px; /* Espaciado alrededor del texto */
+}
+
+.lang-button {
+  padding: 10px 20px; /* Espaciado dentro del botón */
+  background-color: #555; /* Fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.lang-button:hover {
+  background-color: #777; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos generales para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #131515; /* Cambia esto al color que desees */
+  position: fixed; /* Cambia a fixed para mantenerlo en la parte superior */
+  top: 0; /* Asegura que esté en la parte superior de la ventana */
+  left: 0; /* Alinea a la izquierda */
+  right: 0; /* Alinea a la derecha */
+  z-index: 1000; /* Asegúrate de que el navbar esté por encima de otros elementos */
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger {
+  display: none; /* Ocultar por defecto en pantallas grandes */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white; /* Cambia el color si es necesario */
+  margin: 4px 0;
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Mostrar el menú hamburguesa en pantallas pequeñas */
+  }
+
+  .nav-links {
+    display: none; /* Ocultar los enlaces de navegación por defecto */
+    flex-direction: column; /* Alinear en columna para el menú hamburguesa */
+    width: 100%; /* Hacer que ocupe todo el ancho */
+    background-color: #333; /* Asegúrate de que coincida con el fondo */
+    position: absolute; /* Posición absoluta para superponerse al contenido */
+    top: 60px; /* Ajusta este valor según la altura de tu navbar */
+    left: 0; /* Alinea a la izquierda */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+  }
+
+  .nav-links.show {
+    display: flex; /* Mostrar enlaces de navegación cuando está activo */
+    margin: 0px;
+  }
+
+  /* Ajustar los enlaces de navegación */
+  .nav-links li {
+    margin: 10px 0; /* Espaciado vertical entre los elementos */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .nav-links a {
+    color: white; /* Color de texto blanco para los enlaces */
+    font-size: 20px; /* Tamaño de fuente más grande para los enlaces */
+    padding: 15px; /* Espaciado interno más grande */
+  }
+}
+
+

@@ -1,0 +1,224 @@
+/* src/App.css o src/components/Contact.css */
+
+
+.box__contact {
+  display: block;
+  max-width: 100vw; /* Ancho máximo igual al ancho del viewport */
+  max-height: 100vh; /* Altura máxima igual a la altura del viewport */
+}
+
+.box__contact, h1 {
+  padding-top: 6vh;
+}
+
+
+.contact {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  max-height: 100vh;
+  position: relative; /* Asegura que el contenido se muestre encima del video */
+  color: white;
+  z-index: 10; /* Coloca el contenido delante del video */
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los elementos del formulario */
+  align-items: center; /* Centra los elementos dentro del formulario */
+    max-width: 100vw; /* Ancho máximo igual al ancho del viewport */
+  max-height: 100vh; /* Altura máxima igual a la altura del viewport */
+}
+
+.contact label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none; /* Evita que el textarea sea redimensionable */
+  width: 25vw; /* El ancho del input es el 25% del ancho del viewport */
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+.contact button {
+  background-color: white; /* Color verde */
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #000000; /* Color más oscuro al pasar el mouse */
+  color: red;
+}
+
+/* Estilos adicionales */
+.success-message {
+  color: green;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.contact .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10; /* Coloca el video detrás del contenido */
+  object-fit: cover; /* Cubre todo el área sin distorsionarse */
+  border: none; /* Asegúrate de que no haya borde */
+  overflow: hidden; /* Esto ayuda a evitar desbordamientos */
+}
+
+.content {
+  text-align: center;
+}
+
+/* Estilo del botón flotante */
+.telegram-float-button {
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 20px; /* Ubícalo 20px desde la parte inferior */
+  right: 20px; /* Ubícalo 20px desde la derecha */
+  background-color: #0088cc; /* Color de fondo de Telegram */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Redondea el botón */
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.telegram-float-button:hover {
+  background-color: #006994; /* Cambia el color de fondo cuando se pasa el mouse */
+  transform: scale(1.1); /* Escala ligeramente el botón */
+}
+
+.telegram-float-button i {
+  font-size: 1.5rem; /* Tamaño del icono */
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Asegurarse de que se vea bien en pantallas pequeñas */
+@media (max-width: 768px) {
+  .telegram-float-button {
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+
+  .telegram-float-button i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilo para el botón de Telegram */
+.telegram-button {
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  background-color: #0088cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  font-size: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.telegram-button:hover {
+  transform: scale(1.2);
+  background-color: #006f8e;
+}
+
+.telegram-button i {
+  margin: 0;
+}
+
+.telegram-button:focus {
+  outline: none;
+}
+
+/* Estilo para el contenedor del input de teléfono */
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 10px; /* Padding del contenedor */
+  background-color: white;
+  width: 25vw; /* Aseguramos que el ancho del contenedor sea el mismo que los demás inputs */
+  box-sizing: border-box; /* Garantiza que el padding no afecte el tamaño total */
+}
+
+/* Estilo para el input dentro del contenedor */
+.phone-input-container input {
+  padding: 10px; /* Padding dentro del input */
+  border: none; /* Elimina el borde del input */
+  outline: none; /* Elimina el borde de enfoque */
+  font-size: 1rem;
+  width: 100%; /* Hace que el input ocupe el 100% del ancho disponible dentro del contenedor */
+  box-sizing: border-box; /* Hace que el padding y el borde no afecten el ancho total */
+}
+
+/* Asegurarnos de que el icono de la bandera quede dentro del contenedor */
+.phone-input-container .react-tel-input .flag-dropdown {
+  margin-right: 10px; /* Espacio entre la bandera y el campo de entrada */
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos adicionales para la bandera del país */
+.phone-input-container .react-tel-input .selected-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px; /* Espacio dentro del icono */
+  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+  border-radius: 50%; /* Redondea la bandera */
+  width: auto;
+  height: auto;
+}
+
+/* Clase extra para PhoneInput */
+.PhoneInput {
+  width: 100%;
+}
+
+.PhoneInputCountrySelectArrow {
+color: black;
+}
+
+.contact label {
+  text-shadow: -1px 0 black,
+  1px 0 black,
+  0 -2px black,
+  0 1px black;
+  font-size: 1.1rem;
+  color: white;
+}
+
+
+p {
+  font-size: clamp(0.8rem, 1.6vw, 4rem);
+}
+
+
+
+
+
+

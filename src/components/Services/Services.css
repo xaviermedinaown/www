@@ -1,0 +1,181 @@
+/* src/components/Services/Services.css */
+
+.box__services {
+  display: block;
+  max-width: 100vw; /* Ancho máximo igual al ancho del viewport */
+  max-height: auto; /* Altura máxima igual a la altura del viewport */
+}
+
+.box__services,
+h1 {
+  padding-top: 4vh;
+}
+
+/* Contenedor principal de servicios */
+#services {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url("../../assets/pic_services.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 0 10% 3rem 10%;
+  z-index: 2;
+}
+
+/* Título principal */
+#services h1 {
+  font-size: clamp(1.1rem, 2.5vw, 4rem);
+  transform: translateY(2rem); /* Mueve el h1 3rem hacia abajo */
+}
+
+/* Título principal */
+#services h2 {
+  font-size: clamp(0.8rem, 1.6vw, 1.5rem);
+  transform: translateY(2rem); /* Mueve el h1 3rem hacia abajo */
+}
+
+/* Descripción general */
+#services p {
+  color: #fffafb;
+  font-size: 1rem;
+  text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+  padding: 10px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Contenedor de la cuadrícula */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas en pantallas grandes */
+  gap: 1rem;
+  justify-items: center;
+  padding-top: 1rem;
+  box-sizing: border-box;
+  transform: translateY(2rem); /* Mueve el contenedor hacia abajo */
+}
+
+/* Elementos de la cuadrícula (cada servicio) */
+.grid-item {
+  position: relative;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Evita que los contenidos se salgan */
+}
+
+/* Efecto de hover para cada caja */
+.grid-item:hover {
+  transform: translateY(-10px); /* Eleva ligeramente la caja */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Títulos de los servicios */
+.grid-item h3 {
+  font-size: 1.2rem;
+  color: #ffffff; /*color de los titulos*/
+}
+
+/* Caja de texto que aparece cuando el mouse pasa por encima */
+.hover-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Empieza pequeño en el centro */
+  background-color: rgb(0, 0, 0); /* Fondo oscuro con opacidad */
+  color: #fff; /*color de la letra*/
+  padding: 10px;
+  width: 100%; /* Ocupa el 100% del contenedor */
+  height: 100%; /* Ocupa el 100% del contenedor */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 1s ease-in-out, transform 0.8s ease-in-out; /* Transición de opacidad 1s y expansión 2s */
+  text-align: left;
+  white-space: pre-wrap; /* Asegura que los saltos de línea se respeten */
+  word-wrap: break-word;
+}
+
+/* Mostrar la .hover-box cuando el mouse pasa por encima */
+.grid-item:hover .hover-box {
+  opacity: 1; /* Hacerlo visible con transición de opacidad */
+  transform: translate(-50%, -50%) scale(1); /* Expande desde el centro */
+}
+
+.hover-box ul {
+  line-height: 0.5;
+  list-style-type: disc; /* Asegura que las viñetas sean visibles */
+  padding-left: 3rem; /* Añadir algo de espacio para las viñetas */
+}
+
+/* Imagen de los servicios */
+.grid-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.grid-item img {
+  max-width: 7rem; /*Ancho fijo */
+  max-height: 6rem; /* Alto fijo */
+}
+
+.grid-item i {
+  position: absolute; /* Posiciona el icono de manera absoluta dentro de su contenedor */
+  bottom: 1.5rem;
+  left: 50%; /* Centrado horizontalmente */
+  transform: translateX(
+    -50%
+  ); /* Ajusta el icono para que quede completamente centrado */
+}
+
+/* Media Queries para hacer el grid responsive */
+
+/* En pantallas grandes */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  }
+}
+
+/* En pantallas medianas */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  }
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* En pantallas muy pequeñas (hasta 400px), 1 columna */
+@media (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  #services h1 {
+    font-size: 1.8rem;
+  }
+
+  #services p {
+    font-size: 1rem;
+  }
+}

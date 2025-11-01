@@ -1,0 +1,21 @@
+/* src/components/Footer.css */
+.footer {
+  background-color: rgb(19, 21, 21, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 0px 0;
+  bottom: 0; /* Alinear en la parte inferior */
+  left: 0; /* Alinear a la izquierda */
+  width: 100%; /* Asegurar que ocupa todo el ancho */
+}
+
+.footer p {
+  color: #fffafb;
+  margin: 0.2em;
+  font-size: clamp(
+    0.1rem,
+    2vw + 0.1rem,
+    1rem
+  ); /* Ajusta estos valores según sea necesario */
+}
+
